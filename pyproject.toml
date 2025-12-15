@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-sat-tools"
+version = "0.1.0"
+description = "MCP tools for satellite-related calculations (power budget, link budget, etc.)"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name="Jim Lee" }
+]
+
+# You do NOT list python-sdk here because you're installing it from a local clone.
+# Add dependencies here only if your MCP tools require them.
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["."]
